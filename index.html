@@ -235,7 +235,7 @@
                           if you run this command it will simply state that the certificate is invalid.
                           To fix this you will need to:</li>
               <ol>
-               <li>Change the time to the current using the command “for I in 1 2 3 4; do ssh pi@p$I.local sudo date +%Y%m%d "20180405"; shh pi@p$I.local sudo date +"12:35:00";done.(replace dates and times in quotes with your own values)</li>
+               <li>Change the time to the current using the command “for I in 1 2 3 4; do ssh pi@p$I.local sudo date +%Y%m%d -s "20180405"; shh pi@p$I.local sudo date %H%M%S -s +"12:35:00";done.(replace dates and times in quotes with your own values)</li>
               <li>To the same for all the pi zeros. It doesn't matter if there a couple minutes off.</li>
               </ol>
                <li>Once the times have been set, paste the token in each of the other pi zeros to add them to the swarm.</li>
