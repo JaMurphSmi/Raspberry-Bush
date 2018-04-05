@@ -199,7 +199,7 @@
               Do this, you need to firstly need to use the command “minicom” follow by the hostname of the pi zero,
               for example, “minicom p1”. Once in, follow step 2b to setup ssh. Repeat for all pi zeros.</li>
               <li>Once done, generate an rsa key, “ssh-keygen -t rsa”.</li>
-              <li>To get passwordless access into the pi’s,  run the following command, “for I in 1 2 3 4 sshit”.</li>
+              <li>To get passwordless access into the pi’s,  run the following command, “for I in 1 2 3 4; do ssh-copy-id pi@pI;done”.</li>
               <li>If you are using v1.3 of pi zeros, you will run into the issue of having no wifi.</li>
               <ol>
                 <li>ssh into each of the pi zeros and add your wifi details wpa_supplicant.conf file.
@@ -234,7 +234,7 @@
                           if you run this command it will simply state that the certificate is invalid.
                           To fix this you will need to:</li>
               <ol>
-               <li>Change the time to the current using the command “sudo date -s "11 MAR 2018 11:11:11".</li>
+               <li>Change the time to the current using the command “for I in 1 2 3 4; do sudo date -s "11 MAR 2018 11:11:11"; pi@pI.local;done.</li>
               <li>To the same for all the pi zeros. It doesn't matter if there a couple minutes off.</li>
               </ol>
                <li>Once the times have been set, paste the token in each of the other pi zeros to add them to the swarm.</li>
