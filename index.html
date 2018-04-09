@@ -200,8 +200,9 @@
               <li>Once done, generate an rsa key, “ssh-keygen -t rsa”.</li>
               <li>To get passwordless access into the pi’s,  run the following command, “for I in 1 2 3 4; do ssh-copy-id pi@p$I.local;done”.</li>
 			  <li></li>
-              <li>If you are using v1.3 of pi zeros, you will run into the issue of having no wifi.</li>
-              <ol>
+              <li>If you are using v1.3 of pi zeros, you will run into the issue of having no wifi. Before following the steps below please ensure than you have all devices 
+			  using the same version of the OS image ie 2018, as there are potential version conflict issues.</li>
+			  <ol>
                 <li>ssh into each of the pi zeros and add your wifi details wpa_supplicant.conf file.
                 This will make more sense in a bit when we are installing docker. Just “sudo nano /etc/wpa_supplicant/wpa_supplicants.conf” and add your network details i.e. <br> network  =	{ <br>
                         ssid="HOMEWIFI" <br>
