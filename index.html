@@ -206,7 +206,7 @@
               <li>Once done, generate an rsa key, “ssh-keygen -t rsa”.</li>
               <li>To get passwordless access into the pi’s,  run the following command, “for I in 1 2 3 4; do ssh-copy-id pi@p$I.local;done”.</li>
 			  <li></li>
-              <li>If you are using v1.3 of pi zeros, you will run into the issue of having no wifi. Before following the steps below please ensure than you have all devices 
+              <li>If you are using v1.3 of pi zeros, you will run into the issue of having no wifi.<b>Note: </b>Before following the steps below please ensure that you have all devices 
 			  using the same version of the OS image ie 2018, as there are potential version conflict issues.</li>
 			  <ol>
                 <li>ssh into each of the pi zeros and add your wifi details wpa_supplicant.conf file.
@@ -216,9 +216,9 @@
                         }</li>
                 <li>You may have to reboot, to do so, “sudo reboot”.</li>
               </ol>
-			  <li>It is necessary to download matplotlib, this is done using "sudo apt-get install python-matplotlib" and may take a while.</li>
-			  <li>You may have some memory size errors when downloading matplotlib, therefore you will want to look <a href="https://wiki.jerryshao.com/doku.php?id=itcarlow%3Ayear4%3Aconcurrence-and-distributed-development%3Aprojects%3Araspberry-pi-cluster">here</a> for solutions</li>
-              <li>Once all done, we can now move onto actually installing docker.
+			  <li>Before continuing on you may have some memory size errors when downloading matplotlib, therefore you will want to look <a href="https://wiki.jerryshao.com/doku.php?id=itcarlow%3Ayear4%3Aconcurrence-and-distributed-development%3Aprojects%3Araspberry-pi-cluster">here</a> for solutions</li>
+			  <li>It is necessary to download matplotlib for both the Raspberry Pi, and the Pi Zeros located on your clusterhat, this is done using "sudo apt-get install python-matplotlib" and may take a while.</li>
+			  <li>Once all done, we can now move onto actually installing docker.
                         Run the following command to download docker, “curl -sSL https://get.docker.com | sh”.</li>
               <li>Once downloaded, run “sudo usermod -aG docker pi”. Now 'pi' user can run docker without needing sudo.</li>
               <li>Run “docker version” to make sure everything installed correctly.</li>
